@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Tabs - Default functionality</title>
+  
+  <link rel="stylesheet" href="/resources/demos/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+		$( function() {
+			$( "#tabs" ).tabs();
+		} );
+
+	
+  </script>
+	<style>
+		.section {
+			border: solid #5489d3 4px;
+			padding: 5%;
+		}
+		#error-block {
+			display: none;
+			border: solid red 2px;
+			text-align: center;
+			font-weight: bold;
+			padding: 7px;
+			margin-bottom: 6px;
+			border-radius: 5px;
+			
+		}
+	</style>
+	
+</head>
+<body>
+ 
+ <div >
+	<div class="container-fluid section" id="section-1">
+		<h2 class="text-center text-primary">Шаг 1 из 3: выберите тип крыши</h2>
+			
+			<ul class="nav nav-pills">	
+				
+				<li class="active">
+					<a data-toggle="pill" href="#tab-1">
+						<img src="http://technokrov.by/wp-content/themes/technokrov/img/calc1.png" alt="">
+						<div class="wrap-description">
+							<h3>Двухскатная</h3>
+						</div>
+					</a>
+				</li>
+				
+				<li>
+					<a data-toggle="pill" href="#tab-2">
+						<img src="http://technokrov.by/wp-content/themes/technokrov/img/calc2.png" alt="">
+						<div class="wrap-description">
+							<h3>Вальмовая</h3>
+						</div>		
+					</a>
+				</li>
+				
+				<li>
+					<a data-toggle="pill" href="#tab-3">
+						<img src="http://technokrov.by/wp-content/themes/technokrov/img/calc3.png" alt="">
+						<div class="wrap-description">
+							<h3>Шатровая</h3>
+						</div>
+					</a>
+				</li>
+				
+				<li>
+					<a data-toggle="pill" href="#tab-4">
+						<img src="http://technokrov.by/wp-content/themes/technokrov/img/calc4.png" alt="">
+						<div class="wrap-description">
+							<h3>Мансарда(ломанная)</h3>
+						</div>
+					</a>
+				</li>
+				
+			</ul>
+		
+		<h2 class="text-center text-primary">Шаг 2 из 3: укажите размеры крыши (примерные или точные)</h2>
+		
+		<div class="tab-content">
+			<div id="tab-1" class="tab-pane fade in active">
+      <div class="row">
+				
+				<div class="col-md-6 ">
+					<div class="center-block">
+						<img class="center-block" src="http://technokrov.by/wp-content/themes/technokrov/img/calc1_1.png" alt="">
+					</div>
+				</div>
+				
+				<div class="col-md-6">
+					
+					<div>
+               <div class="desc-input">X</div>
+               <input class="input" name="tab1-x" type="number" min="1"><span>м</span>
+          </div>
+						
+          <div>
+            <div class="desc-input">L<sub>1</sub></div>
+            <input class="input" name="tab1-l" type="number" min="1"><span>м</span>
+          </div>
+
+					<div>
+            <div class="desc-input">L<sub>2</sub></div>
+            <input class="input" name="tab1-l2" type="number" min="1"><span>м</span>
+          </div>
+						
+        </div>
+				
+			</div>
+    </div>
+    <div id="tab-2" class="tab-pane fade">
+			<div class="row">
+				<div class="col-md-6 ">
+					<div class="center-block">
+						<img class="center-block" src="http://technokrov.by/wp-content/themes/technokrov/img/calc1_2.png" alt="">
+					</div>
+				</div>
+				
+				<div class="col-md-6">
+					
+					<div>
+               <div class="desc-input">X</div>
+               <input class="input" name="tab2-x" type="number" min="1""><span>м</span>
+            </div>
+						
+          <div>
+            <div class="desc-input">X<sub>2</sub></div>
+            <input class="input" name="tab2-x2" type="number" min="1""><span>м</span>
+          </div>
+
+					<div>
+            <div class="desc-input">X<sub>3</sub></div>
+            <input class="input" name="tab2-x3" type="number" min="1""><span>м</span>
+          </div>
+					
+					<div>
+            <div class="desc-input">L<sub>1</sub></div>
+            <input class="input" name="tab2-l1" type="number" min="1""><span>м</span>
+          </div>
+					
+					<div>
+            <div class="desc-input">L<sub>2</sub></div>
+            <input class="input" name="tab2-l2" type="number" min="1""><span>м</span>
+          </div>
+						
+        </div>
+			</div>
+    </div>
+    <div id="tab-3" class="tab-pane fade">
+      <div class="row">
+				
+				<div class="col-md-6 ">
+					<div class="center-block">
+						<img class="center-block" src="http://technokrov.by/wp-content/themes/technokrov/img/calc1_3.png" alt="">
+					</div>
+				</div>
+				
+				<div class="col-md-6">
+					
+					<div>
+               <div class="desc-input">X</div>
+               <input class="input" name="tab3-x" type="text"><span>м</span>
+            </div>
+						
+          <div>
+            <div class="desc-input">X<sub>1</sub></div>
+            <input class="input" name="tab3-x1" type="text"><span>м</span>
+          </div>
+
+					<div>
+            <div class="desc-input">L<sub>1</sub></div>
+            <input class="input" name="tab3-l1" type="text"><span>м</span>
+          </div>
+						
+        </div>
+				
+			</div>
+    </div>
+    <div id="tab-4" class="tab-pane fade">
+      <div class="row">
+				
+				<div class="col-md-6 ">
+					<div class="center-block">
+						<img class="center-block" src="http://technokrov.by/wp-content/themes/technokrov/img/calc1_4.png" alt="">
+					</div>
+				</div>
+				
+				<div class="col-md-6">
+					
+					<div>
+            <div class="desc-input">X</div>
+            <input class="input" name="tab4-x" type="text"><span>м</span>
+					</div>
+						
+          <div>
+            <div class="desc-input">L<sub>1</sub></div>
+            <input class="input" name="tab4-l" type="text"><span>м</span>
+          </div>
+
+					<div>
+            <div class="desc-input">L<sub>2</sub></div>
+            <input class="input" name="tab4-l2" type="text"><span>м</span>
+          </div>
+					
+					<div>
+            <div class="desc-input">L<sub>3</sub></div>
+            <input class="input" name="tab4-l3" type="text"><span>м</span>
+          </div>
+					
+					<div>
+            <div class="desc-input">L<sub>4</sub></div>
+            <input class="input" name="tab4-l4" type="text"><span>м</span>
+          </div>
+						
+        </div>
+				
+			</div>
+    </div>
+  </div>
+	<div id="error-block" class="col-md-4 col-md-offset-4 bg-danger">Заполните все поля!!!</div>
+	<div class="col-md-2 col-md-offset-5">
+		
+		<a class="btn btn-primary btn-lg center-block" id="next-section-1">ДАЛЕЕ</a>
+	</div>
+	
+	
+</div>
+<div id="section-2" class="section hide">
+	<h2 class="text-center text-primary">Шаг 3 из 3: выберите ценовой сегмент</h2>
+	<div class="center-block text-center" style="width: 100%">
+	<input type="radio" name="price-segment" value="недорогой" checked="true"> НЕДОРОГОЙ<Br>
+  <input type="radio" name="price-segment" value="средний"> СРЕДНИЙ<Br>
+  <input type="radio" name="price-segment" value="премиум"> ПРЕМИУМ<Br>
+	</div>
+	<div class="col-md-4 col-xs-offset-4">
+		<a class="btn btn-primary btn-lg " id="next-section-2">ДАЛЕЕ</a>
+		<a class="btn btn-primary btn-lg " id="prev-section-2">НАЗАД</a>
+	</div>
+</div>
+<div id="section-3" class="hide">
+	<h2 class="text-center text-primary">Расчет готов</h2>
+	<p class="text-center">Введите Ваши данные, и мы сообщим Вам стоимость</p>
+	<div class="col-md-4 col-xs-offset-4">
+		<a class="btn btn-primary btn-lg " id="next-section-3">ПОЛУЧИТЬ СМЕТУ</a>
+		<a class="btn btn-primary btn-lg " id="prev-section-3">НАЗАД</a>
+	</div>
+</div>
+ 
+<script>
+	
+	$(".input").click(function(){
+		$("#error-block").slideUp(300);
+		})
+	$("ul.nav").click(function(){
+		$("#error-block").slideUp(300);
+	})
+	
+	$("#next-section-1").click(function(){
+		
+		function nextStep() {
+			$("#section-1").addClass("hide");
+			$("#section-2").removeClass("hide");
+			}
+		function inputValidate(elem) {
+			var flag = true;
+			$(elem).each(function(){
+				if($(this).val()==""){
+					$("#error-block").slideDown(300);
+					flag = false;
+					return false;
+				}
+			});
+			return flag;
+		};
+		
+		var tab = $(".active").children().attr("href");
+		var message = "";
+		switch(tab) {
+			case "#tab-1":
+				
+				if(inputValidate("#tab-1 .input")) {
+					message = "X="+$("input[name=tab1-x]").val() +" L=" +$("input[name=tab1-l]").val() + " L1=" + $("input[name=tab1-l2]").val();
+					nextStep();
+				}
+				break;
+			case "#tab-2":
+				if(inputValidate("#tab-2 .input")) {
+					message = "X="+$("input[name=tab2-x]").val() +" X2=" +$("input[name=tab2-x2]").val() + " X3=" + $("input[name=tab2-x2]").val()+" L1=" +$("input[name=tab2-l1]").val() + " L2=" + $("input[name=tab2-l2]").val();
+					nextStep();
+				}
+				break;
+			case "#tab-3":
+				message = "X="+$("input[name=tab3-x]").val() +" X1=" +$("input[name=tab3-x1]").val() + " L1=" + $("input[name=tab3-l1]").val();
+				//alert(message);
+				break;
+			case "#tab-4":
+				message = "X="+$("input[name=tab4-x]").val() +" L1=" +$("input[name=tab4-l]").val() + " L2=" + $("input[name=tab4-l2]").val()+" L3=" +$("input[name=tab4-l3]").val() + " L4=" + $("input[name=tab4-l4]").val();
+				//alert(message);
+				break;
+			}
+		$("input[name=final-message]").val(message);
+	});
+	
+	$("#next-section-2").click(function(){
+	
+		$("#section-2").addClass("hide");
+		$("#section-3").removeClass("hide");
+		var segment = $( "input[type=radio][name=price-segment]:checked" ).val();
+		$("input[name=price-seg]").val(segment);
+		
+	});
+	
+	$("#prev-section-2").click(function(){
+	
+		$("#section-2").addClass("hide");
+		$("#section-1").removeClass("hide");
+	
+	});
+	$("#prev-section-3").click(function(){
+	
+		$("#section-3").addClass("hide");
+		$("#section-2").removeClass("hide");
+	
+	});
+	
+	 </script>
+</body>
+</html>
